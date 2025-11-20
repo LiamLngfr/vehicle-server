@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Check out repository code 
         uses: actions/checkout@v5
-      - run: apt-get update
-      - run: apt-get install cowsay
+      - run: sudo apt-get update
+      - run: sudo apt-get install cowsay
       - run: ls -l # Liste les fichier du répertoire courant
       - run: cat README.md | cowsay # Affiche le contenu du fichier `README.md` à la base du dépôt
