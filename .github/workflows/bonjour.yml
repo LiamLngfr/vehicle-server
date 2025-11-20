@@ -13,4 +13,13 @@ jobs:
       - name: Check out repository code 
         uses: actions/checkout@v5
       - run: ls -l # Liste les fichier du répertoire courant
+      - name: Read README.md
+        id: read
+        uses: juliangruber/read-file-action@v1
+        with:
+          path: ./README.md
+      - name: cow read message
+        uses: Code-Hex/neo-cowsay-action@v1
+        with:
+          message: steps.read.outputs
       - run: cat README.md | cowsay # Affiche le contenu du fichier `README.md` à la base du dépôt
