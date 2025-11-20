@@ -6,6 +6,6 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - name: Check out repository code 
-        uses: checkout actions/checkout@v5
+        uses: actions/checkout@v5
       - run: ls -l # Liste les fichier du répertoire courant
       - run: cat README.md # Affiche le contenu du fichier `README.md` à la base du dépôt
