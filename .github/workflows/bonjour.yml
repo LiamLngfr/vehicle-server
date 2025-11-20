@@ -4,10 +4,13 @@ on:
 jobs:
   dire_bonjour:
     runs-on: ubuntu-24.04
+
+    container:
+      image: ghcr.io/cicd-lectures/gitpod:latest
+      options: --user=root      
+
     steps:
       - name: Check out repository code 
         uses: actions/checkout@v5
-      - run: sudo apt-get update
-      - run: sudo apt-get install cowsay
       - run: ls -l # Liste les fichier du répertoire courant
       - run: cat README.md | cowsay # Affiche le contenu du fichier `README.md` à la base du dépôt
