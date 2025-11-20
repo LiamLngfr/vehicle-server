@@ -1,0 +1,4 @@
+
+#Dossiers ignores
+node_modules/
+dist/
