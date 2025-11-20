@@ -1,0 +1,13 @@
+name: app_test
+on:
+  - push
+jobs:
+  Initialisation:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5 # Récupère le contenu du dépôt correspondant au commit du workflow en cours
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+      - run: nmp ci
+      - run: npm run build
