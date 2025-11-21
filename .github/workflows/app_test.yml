@@ -1,6 +1,7 @@
 name: app_test
 on:
   - push
+  - pull_request
 jobs:
   Initialisation:
     runs-on: ubuntu-24.04
