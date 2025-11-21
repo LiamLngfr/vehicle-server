@@ -1,4 +1,3 @@
-import { isStringObject } from 'util/types';
 import { VehicleStore } from '../store/vehicle';
 import { Request, Response } from 'express';
 
